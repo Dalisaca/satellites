@@ -73,7 +73,7 @@ const jupiter = new THREE.Mesh(jupiterGeometry, jupiterMaterial);
 scene.add(jupiter);
 
 // Satellite 1 orbiting Earth (GEO)
-const satellite1OrbitRadius = 6.8;
+const satellite1OrbitRadius = 6.5;
 const satellite1 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#ffff00' }) // Yellow for GEO
@@ -81,7 +81,7 @@ const satellite1 = new THREE.Mesh(
 scene.add(satellite1);
 
 // Satellite 2 orbiting Earth (LEO)
-const satellite2OrbitRadius = 5.8;
+const satellite2OrbitRadius = 5.5;
 const satellite2 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#00ff00' }) // Green for LEO
@@ -89,7 +89,7 @@ const satellite2 = new THREE.Mesh(
 scene.add(satellite2);
 
 // Satellite 3 orbiting Earth vertically (MEO)
-const satellite3OrbitRadius = 6.4;
+const satellite3OrbitRadius = 6.1;
 const satellite3 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#0000ff' }) // Blue for MEO
@@ -170,8 +170,8 @@ function updatePlanetPositions() {
   mercury.position.x = Math.cos(mercuryAngle) * 40;
   mercury.position.z = Math.sin(mercuryAngle) * 40;
 
-  jupiter.position.x = Math.cos(jupiterAngle) * 180;
-  jupiter.position.z = Math.sin(jupiterAngle) * 180;
+  jupiter.position.x = Math.cos(jupiterAngle) * 220;
+  jupiter.position.z = Math.sin(jupiterAngle) * 220;
   // Update angles for next frame
   earthAngle += 0.003;
   marsAngle += 0.002;
