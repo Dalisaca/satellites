@@ -1,4 +1,3 @@
-// JavaScript code to create a beautiful model of satellite internet with spinning planets
 // Initialize Three.js
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -28,92 +27,90 @@ function createLine(start, end, color) {
 
 const textureLoader = new THREE.TextureLoader();
 const backgroundTexture = textureLoader.load('./assets/background.jpg', () => {
-  // This function will be called once the texture is loaded.
-  // We will set it as the scene's background.
   scene.background = backgroundTexture;
 });
 
 // Create Sun sphere
-const texture = textureLoader.load('./assets/sun.jpg'); // Replace 'path_to_your_texture_image.jpg' with the actual path or URL to your texture image.
+const texture = textureLoader.load('./assets/sun.jpg');
 const material = new THREE.MeshBasicMaterial({ map: texture });
-const sunGeometry = new THREE.SphereGeometry(8, 32, 32); // Assuming you want a sphere with radius 8 units.
+const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
 const sun = new THREE.Mesh(sunGeometry, material);
 scene.add(sun);
 
 // Create Earth sphere
-const earthTexture = textureLoader.load('./assets/earth.jpg'); // Replace 'path_to_earth_texture.jpg' with the actual path or URL to your Earth texture image.
+const earthTexture = textureLoader.load('./assets/earth.jpg');
 const earthMaterial = new THREE.MeshBasicMaterial({ map: earthTexture });
-const earthGeometry = new THREE.SphereGeometry(5, 32, 32); // Assuming you want a sphere with radius 5 units.
+const earthGeometry = new THREE.SphereGeometry(5, 32, 32);
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earth);
 
 // Create Mars sphere
-const marsTexture = textureLoader.load('./assets/mars.jpg'); // Replace 'path_to_mars_texture.jpg' with the actual path or URL to your Mars texture image.
+const marsTexture = textureLoader.load('./assets/mars.jpg');
 const marsMaterial = new THREE.MeshBasicMaterial({ map: marsTexture });
-const marsGeometry = new THREE.SphereGeometry(4.5, 32, 32); // Assuming you want a sphere with radius 4 units.
+const marsGeometry = new THREE.SphereGeometry(4.5, 32, 32);
 const mars = new THREE.Mesh(marsGeometry, marsMaterial);
 scene.add(mars);
 
 // Create Venus sphere
-const venusTexture = textureLoader.load('./assets/venus.jpg'); // Replace 'path_to_mars_texture.jpg' with the actual path or URL to your Mars texture image.
+const venusTexture = textureLoader.load('./assets/venus.jpg');
 const venusMaterial = new THREE.MeshBasicMaterial({ map: venusTexture });
-const venusGeometry = new THREE.SphereGeometry(4, 32, 32); // Assuming you want a sphere with radius 4 units.
+const venusGeometry = new THREE.SphereGeometry(4, 32, 32);
 const venus = new THREE.Mesh(venusGeometry, venusMaterial);
 scene.add(venus);
 
 // Create Mercury sphere
-const mercuryTexture = textureLoader.load('./assets/mercury.jpg'); // Replace 'path_to_mercury_texture.jpg' with the actual path or URL to your Mercury texture image.
+const mercuryTexture = textureLoader.load('./assets/mercury.jpg');
 const mercuryMaterial = new THREE.MeshBasicMaterial({ map: mercuryTexture });
-const mercuryGeometry = new THREE.SphereGeometry(2, 32, 32); // Assuming you want a sphere with radius 2 units.
+const mercuryGeometry = new THREE.SphereGeometry(2, 32, 32);
 const mercury = new THREE.Mesh(mercuryGeometry, mercuryMaterial);
 scene.add(mercury);
 
 // Create Jupiter sphere
-const jupiterTexture = textureLoader.load('./assets/jupiter.jpg'); // Replace 'path_to_jupiter_texture.jpg' with the actual path or URL to your Jupiter texture image.
+const jupiterTexture = textureLoader.load('./assets/jupiter.jpg');
 const jupiterMaterial = new THREE.MeshBasicMaterial({ map: jupiterTexture });
-const jupiterGeometry = new THREE.SphereGeometry(10, 32, 32); // Assuming you want a sphere with radius 10 units.
+const jupiterGeometry = new THREE.SphereGeometry(20, 32, 32);
 const jupiter = new THREE.Mesh(jupiterGeometry, jupiterMaterial);
 scene.add(jupiter);
 
-// Create satellite 1 orbiting Earth (GEO)
-const satellite1OrbitRadius = 7;
+// Satellite 1 orbiting Earth (GEO)
+const satellite1OrbitRadius = 6.8;
 const satellite1 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#ffff00' }) // Yellow for GEO
 );
 scene.add(satellite1);
 
-// Create satellite 2 orbiting Earth (LEO)
-const satellite2OrbitRadius = 6;
+// Satellite 2 orbiting Earth (LEO)
+const satellite2OrbitRadius = 5.8;
 const satellite2 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#00ff00' }) // Green for LEO
 );
 scene.add(satellite2);
 
-// Create satellite 3 orbiting Earth vertically (MEO)
-const satellite3OrbitRadius = 6.7;
+// Satellite 3 orbiting Earth vertically (MEO)
+const satellite3OrbitRadius = 6.4;
 const satellite3 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#0000ff' }) // Blue for MEO
 );
 scene.add(satellite3);
 
-// Create satellite 4 orbiting Earth vertically (Polar Orbit)
-const satellite4OrbitRadius = 7.2;
+// Satellite 4 orbiting Earth vertically (Polar Orbit)
+const satellite4OrbitRadius = 7.3;
 const satellite4 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#ffffff' }) // White for Polar Orbit
 );
 scene.add(satellite4);
 
-// Create Moon orbiting Earth
-const moonOrbitRadius = 20; // 20% of Earth's orbit radius
-const moonSize = 1; // 1/4th of Earth's size
+// Moon orbiting Earth
+const moonOrbitRadius = 20;
+const moonSize = 1;
 
-const moonTexture = textureLoader.load('./assets/moon.jpg'); // Replace 'path_to_mars_texture.jpg' with the actual path or URL to your Mars texture image.
+const moonTexture = textureLoader.load('./assets/moon.jpg');
 const moonMaterial = new THREE.MeshBasicMaterial({ map: moonTexture });
-const moonGeometry = new THREE.SphereGeometry(moonSize, moonOrbitRadius); // Assuming you want a sphere with radius 4 units.
+const moonGeometry = new THREE.SphereGeometry(moonSize, moonOrbitRadius);
 const moon = new THREE.Mesh(moonGeometry, moonMaterial);
 scene.add(moon);
 
@@ -121,28 +118,28 @@ scene.add(moon);
 const dataTransferLine1 = createLine(
   satellite1.position,
   earth.position,
-  0xff0000
+  0xffff00 //YELLOW color
 );
 scene.add(dataTransferLine1);
 
 const dataTransferLine2 = createLine(
   satellite2.position,
   earth.position,
-  0x00ff00
+  0x00ff00 //GREEN color
 );
 scene.add(dataTransferLine2);
 
 const dataTransferLine3 = createLine(
   satellite3.position,
   earth.position,
-  0xffff00
+  0x0000ff //BLUE color
 );
 scene.add(dataTransferLine3);
 
 const dataTransferLine4 = createLine(
   satellite4.position,
   earth.position,
-  0x00ffff
+  0xffffff //WHITE color
 );
 scene.add(dataTransferLine4);
 
