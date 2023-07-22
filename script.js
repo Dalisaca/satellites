@@ -97,7 +97,7 @@ const satellite3 = new THREE.Mesh(
 scene.add(satellite3);
 
 // Satellite 4 orbiting Earth vertically (Polar Orbit)
-const satellite4OrbitRadius = 7.3;
+const satellite4OrbitRadius = 7;
 const satellite4 = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 1),
   new THREE.MeshBasicMaterial({ color: '#ffffff' }) // White for Polar Orbit
