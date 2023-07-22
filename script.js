@@ -33,7 +33,7 @@ const backgroundTexture = textureLoader.load('./assets/background.jpg', () => {
 // Create Sun sphere
 const texture = textureLoader.load('./assets/sun.jpg');
 const material = new THREE.MeshBasicMaterial({ map: texture });
-const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
+const sunGeometry = new THREE.SphereGeometry(25, 32, 32);
 const sun = new THREE.Mesh(sunGeometry, material);
 scene.add(sun);
 
@@ -144,7 +144,7 @@ const dataTransferLine4 = createLine(
 scene.add(dataTransferLine4);
 
 // Camera position
-camera.position.set(0, 0, 85);
+camera.position.set(0, 0, 110);
 
 // Set initial angles for planet positions
 let earthAngle = 0;
@@ -158,20 +158,20 @@ let moonAngle = 0;
 
 // Update planet positions around the Sun
 function updatePlanetPositions() {
-  earth.position.x = Math.cos(earthAngle) * 70;
-  earth.position.z = Math.sin(earthAngle) * 70;
+  earth.position.x = Math.cos(earthAngle) * 90;
+  earth.position.z = Math.sin(earthAngle) * 90;
 
-  mars.position.x = Math.cos(marsAngle) * 120;
-  mars.position.z = Math.sin(marsAngle) * 120;
+  mars.position.x = Math.cos(marsAngle) * 140;
+  mars.position.z = Math.sin(marsAngle) * 140;
 
-  venus.position.x = Math.cos(venusAngle) * 50;
-  venus.position.z = Math.sin(venusAngle) * 50;
+  venus.position.x = Math.cos(venusAngle) * 70;
+  venus.position.z = Math.sin(venusAngle) * 70;
 
   mercury.position.x = Math.cos(mercuryAngle) * 40;
   mercury.position.z = Math.sin(mercuryAngle) * 40;
 
-  jupiter.position.x = Math.cos(jupiterAngle) * 160;
-  jupiter.position.z = Math.sin(jupiterAngle) * 160;
+  jupiter.position.x = Math.cos(jupiterAngle) * 180;
+  jupiter.position.z = Math.sin(jupiterAngle) * 180;
   // Update angles for next frame
   earthAngle += 0.003;
   marsAngle += 0.002;
