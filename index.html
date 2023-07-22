@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satellite Internet Model</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+      }
+      #scene-container {
+        width: 100%;
+        height: 100vh;
+      }
+      .satellite-info {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+        background-color: gray;
+        overflow-y: auto;
+        max-height: 200px;
+        opacity: 0.8;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene-container"></div>
+    <div class="satellite-info" id="satellite1-info">
+      <h3>Satellite 1 Information <span style="color: yellow">Yellow</span></h3>
+      <div>Speed: 100 Mbps</div>
+      <div>Orbit: Geostationary</div>
+      <div>Coverage Area: Global</div>
+      <div>Latency: 600 ms</div>
+      <div>Bandwidth: 500 MHz</div>
+      <div>Frequency: 10 GHz</div>
+      <div>Transponders: 24</div>
+      <div>Antenna Diameter: 2.4 meters</div>
+
+      <h3>Satellite 2 Information <span style="color: green">Green</span></h3>
+      <div>Speed: 150 Mbps</div>
+      <div>Orbit: Low Earth Orbit</div>
+      <div>Coverage Area: Regional</div>
+      <div>Latency: 300 ms</div>
+      <div>Bandwidth: 800 MHz</div>
+      <div>Frequency: 15 GHz</div>
+      <div>Transponders: 32</div>
+      <div>Antenna Diameter: 3.0 meters</div>
+
+      <h3>Satellite 3 Information <span style="color: blue">Blue</span></h3>
+      <div>Speed: 50 Mbps</div>
+      <div>Orbit: Medium Earth Orbit</div>
+      <div>Coverage Area: National</div>
+      <div>Latency: 500 ms</div>
+      <div>Bandwidth: 400 MHz</div>
+      <div>Frequency: 8 GHz</div>
+      <div>Transponders: 16</div>
+      <div>Antenna Diameter: 1.8 meters</div>
+
+      <h3>Satellite 4 Information <span style="color: white">White</span></h3>
+      <div>Speed: 200 Mbps</div>
+      <div>Orbit: Geostationary</div>
+      <div>Coverage Area: Global</div>
+      <div>Latency: 600 ms</div>
+      <div>Bandwidth: 1000 MHz</div>
+      <div>Frequency: 20 GHz</div>
+      <div>Transponders: 48</div>
+      <div>Antenna Diameter: 4.5 meters</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="your_script.js"></script>
+  </body>
+</html>
