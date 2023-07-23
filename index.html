@@ -19,18 +19,117 @@
         font-family: Arial, Helvetica, sans-serif;
         bottom: 10px;
         right: 10px;
-        padding: 15px;
+        padding: 20px;
         background-color: gray;
         overflow-y: auto;
         max-height: 200px;
         opacity: 0.8;
-        width: 250px;
+        width: 280px;
+        border-top-left-radius: 40px 40px;
+      }
+      .satellite-info::-webkit-scrollbar {
+        width: 15px;
+      }
+      .satellite-info::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        scroll-behavior: smooth;
+      }
+
+      /*LOADER */
+      #loader {
+        position: fixed;
+        top: 45%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #4db6ac;
+        animation: spin 2s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s;
+      }
+
+      @-webkit-keyframes animatebottom {
+        from {
+          bottom: -100px;
+          opacity: 0;
+        }
+        to {
+          bottom: 0px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes animatebottom {
+        from {
+          bottom: -100px;
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+      #preparation-message {
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ef6c00;
+        font-size: 30px;
+        text-align: center;
+        z-index: 2;
+        text-transform: uppercase;
+      }
+
+      #container-loader {
+        background-color: white;
+        position: absolute;
+        margin: 150px;
+        margin-left: 510px;
+        width: 500px;
+        height: 400px;
+        border-radius: 10px;
+      }
+      body {
+        background-color: #4db6ac;
       }
     </style>
   </head>
-  <body>
-    <div id="scene-container"></div>
-    <div class="satellite-info" id="satellite1-info">
+  <body onload="myFunction()" style="margin: 0">
+    <div id="container-loader">
+      <div id="preparation-message">Prepared by <b>Group 2</b></div>
+      <div id="loader"></div>
+    </div>
+    <div id="scene-container" style="display: none"></div>
+    <div class="satellite-info" id="satellite1-info" style="display: none">
       <h3>Satellite 1 Information <span style="color: yellow">Yellow</span></h3>
       <div>Speed: 100 Mbps</div>
       <div>Orbit: Geostationary</div>

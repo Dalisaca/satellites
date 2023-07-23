@@ -281,3 +281,24 @@ function animate() {
 }
 
 animate();
+
+/*LOADER animation */
+
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+  const elementsToShow = ['satellite1-info', 'scene-container'];
+  const elementsToHide = ['loader', 'preparation-message', 'container-loader'];
+
+  elementsToShow.forEach((elementId) => {
+    document.getElementById(elementId).style.display = 'block';
+  });
+
+  elementsToHide.forEach((elementId) => {
+    document.getElementById(elementId).style.display = 'none';
+  });
+}
