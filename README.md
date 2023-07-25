@@ -11,8 +11,20 @@ The Satellite Internet Model project is a web application that visually demonstr
 * Loader Animation: Upon loading the application, a loader animation is displayed while the content is being prepared.
 * 3D Text Labels: The project utilizes 3D text labels to display information about each satellite, including their speed, orbit type, coverage area, latency, bandwidth, frequency, transponders, and antenna diameter.
 
+<b>How to Use</b>
+
+1. Visit the <a href="https://thriving-arithmetic-77f11d.netlify.app/">live demo</a> to interact with the application or clone this repository and run the project on your local machine.
+2. Wait for the loader animation to finish, and the celestial bodies will be displayed.
+3. Explore the Solar System: Use your mouse to rotate the camera and zoom in/out using the scroll wheel.
+4. Observe Satellite Orbits: Observe the four satellites orbiting Earth in different paths.
+5. Data Transfer Visualization: Watch the data transfer lines between the satellites and Earth.
+
 <b>Technologies Used</b>
 
 * Three.js: A popular 3D library for JavaScript used to create 3D visualization and animations.
 HTML & CSS: Used for structuring the webpage and styling the elements.
 * JavaScript: Utilized for scripting interactivity and animations.
+
+<b>Contribution</b>
+
+If you find any issues or have suggestions for improvements, please feel free to contribute by creating pull requests or opening issues in this GitHub repository.
