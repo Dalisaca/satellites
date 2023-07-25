@@ -1,6 +1,6 @@
 <b>Description</b>
 
-The Satellite Internet Model project is a web application that visually demonstrates <b>the orbits and data transfer between different satellites and Earth</b> using Three.js, a powerful 3D library for JavaScript. The project simulates a solar system with various celestial bodies, including the Sun, Earth, Moon, and other planets, as well as four satellites in different orbits.
+The Satellite Internet Model project is a web application that visually demonstrates the orbits and data transfer between different satellites and Earth using Three.js, a powerful 3D library for JavaScript. The project simulates a solar system with various celestial bodies, including the Sun, Earth, Moon, and other planets, as well as four satellites in different orbits.
 
 <b>Features</b>
 
@@ -13,6 +13,6 @@ The Satellite Internet Model project is a web application that visually demonstr
 
 <b>Technologies Used</b>
 
-* Three.js: A popular 3D library for JavaScript used to create the 3D visualization and animations.
+* Three.js: A popular 3D library for JavaScript used to create 3D visualization and animations.
 HTML & CSS: Used for structuring the webpage and styling the elements.
-* JavaScript: Utilized for scripting the interactivity and animations.
+* JavaScript: Utilized for scripting interactivity and animations.
